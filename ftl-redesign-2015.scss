@@ -193,16 +193,23 @@ a.ftl-button {
 .ftl-hero {
 	position: relative;
 	margin: 0 auto;
-	padding: 0 80px;
+	padding: 0 10px;
 	vertical-align: top;
 	text-align: center;
+
+	@media (min-width: 450px) {
+		padding: 0 80px;
+	}
 }
 
 .ftl-hero__text {
 	display: inline-block;
-	width: 70%;
 	padding-right: 10px;
 	text-align: left;
+
+	@media (min-width: 767px) {
+		width: 70%;
+	}
 }
 
 .ftl-hero > p {
@@ -221,9 +228,12 @@ img.ftl-hero__image {
 .ftl-hero__buttons {
 	position: relative;
 	margin: 0 auto;
-	padding: 0 80px;
 	vertical-align: top;
 	text-align: center;
+
+	@media (min-width: 600px) {
+		padding: 0 80px;
+	}
 }
 
 
@@ -564,14 +574,4 @@ img.ftl-about__image {
 
 #policies {
 	padding: 5%;
-}
-
-@media (min-width: 767px) {
-	.ftl-home__image img {
-		max-width: 70%;
-	}
-}
-
-.ftl-home-text-area {
-	padding-bottom: 30px;
 }
