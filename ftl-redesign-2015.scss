@@ -280,8 +280,8 @@ a.ftl-button--training-list {
 	* SECTION: Training detail
 	*/
 .ftl-training-detail {
-	height: 100vh;
-	padding: 9% 5%;
+	height: 550px;
+	padding: 20px 0px 0px 50px;
 	background-color: $contrast-color;
 	font-size: 1.2em;
 	color: #fff;
@@ -289,7 +289,7 @@ a.ftl-button--training-list {
 }
 
 .ftl-training-detail__description {
-	max-width: 480px;
+	max-width: 440px;
 }
 
 .ftl-training-detail__header {
@@ -302,18 +302,21 @@ a.ftl-button--training-list {
 }
 
 .ftl-training-detail__image {
-	float: right;
-	width: 49%;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	img { // Should be an image of approx 460 x 550
+		border: none;
+		padding: 0;
+	}
 }
 
 a.ftl-button--back-to-top {
 	font-size: 1rem;
-	position: absolute;
-	bottom: 20px;
-	left: 0;
-	right: 0;
-	width: 200px;
-	margin: 0 auto;
+	width: 150px;
+	margin: 10px 0;
+	padding: 8px 12px;
 }
 
 
