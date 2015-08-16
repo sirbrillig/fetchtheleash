@@ -1,0 +1,471 @@
+/**
+	* Custom CSS for fetchtheleash.biz
+	* Base theme: Twentythirteen
+	* current color palette: http://paletton.com/#uid=23w0u0kl1Wx1x+IcEXDsUWkWEVB
+	* new color palette: http://paletton.com/#uid=20s0u0khYkA44rEaTnNqQh5F8fv
+	* or maybe http://paletton.com/#uid=23g0u0khYkA44rEaTnNqQh5F8fv
+	*/
+
+$base-color: #2C6561;
+$button-color: #2C6561;
+$lighter-color: #4D7572;
+$contrast-color: #BE997D;
+$darker-color: #4D7572;
+$darkest-color: #004C46;
+$link-color: #DCCCC0;
+
+
+/**
+	* SECTION: General overrides
+	*/
+.site-title, .site-description {
+	margin-left: 300px;
+}
+
+.site-title {
+	font-size: 50px;
+}
+
+.site-description {
+	font-size: 30px;
+}
+
+.site-main {
+	background-color: #f3fafe;
+}
+
+article.page {
+	padding: 15px 0 0;
+}
+
+div.entry-content {
+	max-width: 100%;
+	margin-top: 10px;
+}
+
+footer.entry-meta {
+	margin: 0;
+	max-width: inherit;
+	background-color: $darker-color;
+	color: #fff;
+}
+
+.entry-meta a {
+	color: #fff;
+}
+
+.entry-content blockquote {
+	margin: 0;
+	text-align: center;
+	padding: 10% 5%;
+	background-color: $lighter-color;
+	color: #fff;
+	font-size: 1.2em;
+}
+
+.site .site-header {
+	background-image: url(http://local.wordpress.dev/wp-content/uploads/2015/08/sniffing.png);
+	background-repeat: repeat;
+	background-size: cover;
+}
+
+.site-header .home-link {
+	background: url(http://local.wordpress.dev/wp-content/uploads/2015/08/Fetch-the-Leash-dog-white.png) no-repeat scroll top;
+	background-position: 40px;
+	min-height: 120px;
+	background-size: contain;
+	margin: 0 auto 10px;
+}
+
+@media (max-width: 643px) {
+	#content .entry-content {
+		padding: 0;
+	}
+}
+
+@media (max-width: 359px) {
+	.site .site-header {
+		background-size: 768px auto;
+	}
+}
+
+@media (min-width: 767px) {
+	.site-header .home-link {
+		min-height: 190px;
+	}
+}
+
+.page .entry-header {
+	display: none;
+}
+
+.nav-menu li a {
+	color: #fff;
+}
+
+.nav-menu .current-menu-item a {
+	color: $link-color;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.navbar {
+	background-color: $base-color;
+}
+
+.site-footer {
+	background-color: $darkest-color;
+}
+
+.site-footer .sidebar-container {
+	background-color: $darker-color;
+}
+
+.site-footer .widget a,
+.site-footer a {
+	color: $link-color;
+}
+
+.entry-content img {
+	max-width: 50%;
+	display: block;
+	margin: 0 auto;
+	padding: 6px;
+	border: 1px solid #ddd;
+}
+
+@media (min-width: 767px) {
+	.entry-content img {
+		max-width: 100%;
+		display: inline-block;
+	}
+}
+
+
+/**
+	* SECTION: Buttons
+	*/
+a.btn {
+	background: $button-color;
+	-webkit-border-radius: 10;
+	-moz-border-radius: 10;
+	border-radius: 10px;
+	color: #ffffff;
+	font-size: 1.2em;
+	padding: 10px 20px;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+
+a.btn.ftl-call-to-action {
+	min-width: 97%;
+	margin: 5px;
+	white-space: nowrap;
+}
+
+.ftl-product .btn {
+	max-width: 350px;
+	width: 100%;
+}
+
+a.btn.ftl-back-to-top {
+	font-size: 1rem;
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	width: 200px;
+}
+
+@media (min-width: 359px) {
+	a.btn.ftl-call-to-action {
+		min-width: 30%;
+	}
+}
+
+@media (min-width: 767px) {
+	a.btn {
+		display: inline-block;
+	}
+}
+
+
+/**
+	* SECTION: Layout blocks
+	*/
+@media (min-width: 767px) {
+	.ftl-box-container {
+		padding: 0 80px;
+	}
+}
+
+.ftl-box__2-3 {
+	display: block;
+	width: 100%;
+	padding: 0 10px;
+	vertical-align: top;
+}
+
+.ftl-box__1-3 {
+	display: block;
+	width: 100%;
+	padding: 0 10px;
+	margin: 10px 0;
+	vertical-align: top;
+}
+
+.ftl-box__1-1 {
+	position: relative;
+	margin: 0 auto;
+	padding: 0 10px;
+	vertical-align: top;
+	text-align: center;
+}
+
+.ftl-box__1-2 {
+	display: inline-block;
+	width: 100%;
+	margin: 10px 0 0 2px;
+	padding: 0 10px;
+	position: relative;
+	vertical-align: top;
+}
+
+@media (min-width: 767px) {
+	.ftl-box__2-3 {
+		display: inline-block;
+		width: 70%;
+	}
+
+	.ftl-box__1-3 {
+		display: inline-block;
+		width: 29%;
+	}
+
+	.ftl-box__1-2 {
+		width: 49%;
+	}
+}
+
+
+/*
+	* SECTION: Walks table
+	*/
+.ftl-table {
+	width: 100%;
+	list-style: none;
+	padding: 0;
+}
+
+.ftl-table--title,
+.ftl-table--price {
+	width: 60%;
+}
+
+.ftl-table--time,
+.ftl-table--button {
+	width: 39%;
+}
+
+.ftl-table li {
+	margin-bottom: 50px;
+}
+
+.ftl-table--title {
+	display: inline-block;
+	line-height: 2.8em;
+	padding: 0 10px;
+	background-color: #fff;
+}
+
+.ftl-table--time {
+	display: inline-block;
+	line-height: 2.8em;
+	padding: 0 10px;
+	background-color: #fff;
+}
+
+.ftl-table--price {
+	line-height: 2.8em;
+	display: block;
+	width: 100%;
+	line-height: 1.5em;
+	padding: 20px;
+}
+
+.ftl-table--button {
+	background-color: $button-color;
+	color: #fff;
+	text-align: center;
+	display: block;
+	width: 100%;
+	line-height: 1.5em;
+	padding: 20px;
+}
+
+@media (min-width: 853px) {
+	.ftl-table--title,
+				  .ftl-table--price {
+		width: 80%;
+	}
+
+	.ftl-table--time,
+				  .ftl-table--button {
+		width: 19%;
+	}
+}
+
+@media (min-width: 480px) {
+	.ftl-table--time:before {
+		content: 'time: ';
+	}
+}
+
+@media (min-width: 380px) {
+	.ftl-table--button {
+		display: inline-block;
+		line-height: 2.8em;
+		padding: 0;
+	}
+
+	.ftl-table--price {
+		display: inline-block;
+		padding: 0 10px;
+	}
+
+	.ftl-table--title,
+				  .ftl-table--price {
+		width: 70%;
+	}
+
+	.ftl-table--time,
+				  .ftl-table--button {
+		width: 29%;
+	}
+}
+
+
+/**
+	* SECTION: Product blocks
+	*/
+.ftl-product {
+	vertical-align: top;
+}
+
+.ftl-actions {
+	margin: 30px auto;
+}
+
+.ftl-product--header {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-weight: 400;
+	font-size: 1.5em;
+	padding: 2px;
+}
+
+.ftl-product--body {
+	padding: 0 20px;
+}
+
+.ftl-product--body.ftl-product--body__summary {
+	padding: 0;
+	font-size: 1em;
+}
+
+@media (min-width: 767px) {
+	.ftl-product {
+		max-width: 380px;
+	}
+
+	.ftl-product--body.ftl-product--body__summary {
+		font-size: 1.2em;
+		height: 200px;
+	}
+}
+
+@media (min-width: 810px) {
+	.ftl-product--body.ftl-product--body__summary {
+		height: 160px;
+	}
+}
+
+.ftl-product--price {
+	margin: 10px;
+	position: absolute;
+	bottom: 0;
+	left: 1em;
+}
+
+/*
+	* SECTION: Banner section blocks
+*/
+.ftl-banner-section {
+	height: 100vh;
+	padding: 9% 5%;
+	background-color: $contrast-color;
+	font-size: 1.2em;
+	color: #fff;
+}
+
+.ftl-banner-section--description {
+	max-width: 480px;
+}
+
+.ftl-banner-section--header {
+	font-size: 2.5em;
+}
+
+.ftl-banner-section--price {
+	font-size: .9em;
+	margin: 15px 0;
+}
+
+.ftl-banner-section__image {
+	float: right;
+	width: 49%;
+}
+
+
+/*
+	* SECTION: Misc
+	*/
+.ftl-about__text {
+	font-size: 1.1em;
+	margin: 10px auto;
+	display: block;
+	text-align: left;
+	max-width: 80%;
+
+	p {
+		text-align: left;
+	}
+}
+
+.ftl-dog-walking {
+	max-width: 600px;
+}
+
+#policies {
+	padding: 5%;
+}
+
+@media (min-width: 767px) {
+	.ftl-home__image img {
+		max-width: 70%;
+	}
+}
+
+.ftl-home-text-area {
+	padding-bottom: 30px;
+}
+
+img.ftl-about-image {
+	max-width: 300px;
+	float: left;
+	margin: 0 20px;
+	box-sizing: border-box;
+}
