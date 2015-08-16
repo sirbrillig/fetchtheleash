@@ -1,11 +1,12 @@
 /**
 	* Custom CSS for fetchtheleash.biz
-	* Base theme: Twentythirteen
-	* current color palette: http://paletton.com/#uid=23w0u0kl1Wx1x+IcEXDsUWkWEVB
-	* new color palette: http://paletton.com/#uid=20s0u0khYkA44rEaTnNqQh5F8fv
-	* or maybe http://paletton.com/#uid=23g0u0khYkA44rEaTnNqQh5F8fv
+	* Overrides base WordPress theme: Twentythirteen
 	*/
 
+/**
+	* SECTION: Colors
+	* Based on: http://paletton.com/#uid=23g0u0khYkA44rEaTnNqQh5F8fv
+*/
 $base-color: #2C6561;
 $button-color: #2C6561;
 $lighter-color: #4D7572;
@@ -141,11 +142,15 @@ footer.entry-meta {
 	}
 }
 
+p {
+	margin: 0 0 16px;
+}
+
 
 /**
 	* SECTION: Buttons
 	*/
-a.btn {
+a.ftl-button {
 	background: $button-color;
 	-webkit-border-radius: 10;
 	-moz-border-radius: 10;
@@ -156,39 +161,159 @@ a.btn {
 	text-decoration: none;
 	text-align: center;
 	display: block;
-	margin: 0 auto;
 }
 
-a.btn.ftl-call-to-action {
+.ftl-button--call-to-action {
 	min-width: 97%;
 	margin: 5px;
 	white-space: nowrap;
 }
 
-.ftl-product .btn {
+.ftl-product .ftl-button {
 	max-width: 350px;
 	width: 100%;
 }
 
-a.btn.ftl-back-to-top {
+@media (min-width: 359px) {
+	a.ftl-button--call-to-action {
+		min-width: 30%;
+	}
+}
+
+@media (min-width: 767px) {
+	a.ftl-button {
+		display: inline-block;
+	}
+}
+
+
+/**
+	* SECTION: Hero block
+	*/
+.ftl-hero {
+	position: relative;
+	margin: 0 auto;
+	padding: 0 80px;
+	vertical-align: top;
+	text-align: center;
+}
+
+.ftl-hero__text {
+	display: inline-block;
+	width: 70%;
+	padding-right: 10px;
+	text-align: left;
+}
+
+.ftl-hero > p {
+	display: inline; // not sure if needed but WP seems to add a p around the img
+}
+
+img.ftl-hero__image {
+	max-width: 29%;
+	max-height: 40vh;
+	display: inline;
+	padding: 6px;
+	margin: 10px 0;
+	vertical-align: top;
+}
+
+.ftl-hero__buttons {
+	position: relative;
+	margin: 0 auto;
+	padding: 0 80px;
+	vertical-align: top;
+	text-align: center;
+}
+
+
+/**
+	* SECTION: Training list
+	*/
+.ftl-training-list {
+		position: relative;
+		margin: 0 auto;
+		padding: 0 80px;
+		vertical-align: top;
+		text-align: center;
+}
+
+.ftl-training-list__item {
+		display: inline-block;
+		width: 30%;
+		padding: 0 10px;
+		margin: 10px 0;
+		vertical-align: top;
+		@media (min-width: 767px) {
+			max-width: 380px;
+		}
+}
+
+.ftl-training-list__item__buttons {
+	margin: 30px auto;
+}
+
+a.ftl-button--training-list {
+	padding: 10px 22px;
+}
+
+.ftl-training-list__item__header {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-weight: 400;
+	font-size: 1.5em;
+	padding: 2px;
+}
+
+.ftl-training-list__item__body {
+	padding: 0;
+	font-size: 1em;
+	@media (min-width: 767px) {
+		font-size: 1.2em;
+		height: 160px;
+	}
+}
+
+
+/**
+	* SECTION: Training detail
+	*/
+.ftl-training-detail {
+	height: 100vh;
+	padding: 9% 5%;
+	background-color: $contrast-color;
+	font-size: 1.2em;
+	color: #fff;
+	position: relative;
+}
+
+.ftl-training-detail__description {
+	max-width: 480px;
+}
+
+.ftl-training-detail__header {
+	font-size: 2.5em;
+}
+
+.ftl-training-detail__price {
+	font-size: .9em;
+	margin: 15px 0;
+}
+
+.ftl-training-detail__image {
+	float: right;
+	width: 49%;
+}
+
+a.ftl-button--back-to-top {
 	font-size: 1rem;
 	position: absolute;
 	bottom: 20px;
 	left: 0;
 	right: 0;
 	width: 200px;
-}
-
-@media (min-width: 359px) {
-	a.btn.ftl-call-to-action {
-		min-width: 30%;
-	}
-}
-
-@media (min-width: 767px) {
-	a.btn {
-		display: inline-block;
-	}
+	margin: 0 auto;
 }
 
 
@@ -398,35 +523,6 @@ a.btn.ftl-back-to-top {
 	position: absolute;
 	bottom: 0;
 	left: 1em;
-}
-
-/*
-	* SECTION: Banner section blocks
-*/
-.ftl-banner-section {
-	height: 100vh;
-	padding: 9% 5%;
-	background-color: $contrast-color;
-	font-size: 1.2em;
-	color: #fff;
-}
-
-.ftl-banner-section--description {
-	max-width: 480px;
-}
-
-.ftl-banner-section--header {
-	font-size: 2.5em;
-}
-
-.ftl-banner-section--price {
-	font-size: .9em;
-	margin: 15px 0;
-}
-
-.ftl-banner-section__image {
-	float: right;
-	width: 49%;
 }
 
 
