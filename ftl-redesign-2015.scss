@@ -287,10 +287,10 @@ a.ftl-button--training-list {
 .ftl-training-list__item__body {
 	padding: 0;
 	font-size: 1em;
-	overflow: hidden;
 	@media (min-width: 767px) {
 		font-size: 1.2em;
-		height: 160px;
+		height: 200px;
+		overflow: hidden;
 	}
 }
 
