@@ -248,6 +248,10 @@ img.ftl-hero__image {
 		text-align: center;
 }
 
+.ftl-training-list--walks {
+		padding: 0 50px;
+}
+
 .ftl-training-list__item {
 		display: inline-block;
 		width: 30%;
@@ -257,6 +261,10 @@ img.ftl-hero__image {
 		@media (min-width: 767px) {
 			max-width: 380px;
 		}
+}
+
+.ftl-training-list__item--walks {
+		padding: 0 20px;
 }
 
 .ftl-training-list__item__buttons {
@@ -279,10 +287,35 @@ a.ftl-button--training-list {
 .ftl-training-list__item__body {
 	padding: 0;
 	font-size: 1em;
+	overflow: hidden;
 	@media (min-width: 767px) {
 		font-size: 1.2em;
 		height: 160px;
 	}
+}
+
+.ftl-training-list__item__body--long {
+	@media (min-width: 767px) {
+		font-size: 1em;
+		height: 260px;
+		text-align: justify;
+	}
+}
+
+.ftl-training-list__notice {
+	padding: 30px;
+}
+
+.ftl-training-list__notice__header {
+	font-size: 1.5em;
+}
+
+.ftl-policies {
+	padding: 30px;
+}
+
+.ftl-policies__header {
+	font-size: 1.5em;
 }
 
 
@@ -355,223 +388,3 @@ img.ftl-about__image {
 	}
 }
 
-
-/**
-	* SECTION: Layout blocks
-	*/
-@media (min-width: 767px) {
-	.ftl-box-container {
-		padding: 0 80px;
-	}
-}
-
-.ftl-box__2-3 {
-	display: block;
-	width: 100%;
-	padding: 0 10px;
-	vertical-align: top;
-}
-
-.ftl-box__1-3 {
-	display: block;
-	width: 100%;
-	padding: 0 10px;
-	margin: 10px 0;
-	vertical-align: top;
-}
-
-.ftl-box__1-1 {
-	position: relative;
-	margin: 0 auto;
-	padding: 0 10px;
-	vertical-align: top;
-	text-align: center;
-}
-
-.ftl-box__1-2 {
-	display: inline-block;
-	width: 100%;
-	margin: 10px 0 0 2px;
-	padding: 0 10px;
-	position: relative;
-	vertical-align: top;
-}
-
-@media (min-width: 767px) {
-	.ftl-box__2-3 {
-		display: inline-block;
-		width: 70%;
-	}
-
-	.ftl-box__1-3 {
-		display: inline-block;
-		width: 29%;
-	}
-
-	.ftl-box__1-2 {
-		width: 49%;
-	}
-}
-
-
-/*
-	* SECTION: Walks table
-	*/
-.ftl-table {
-	width: 100%;
-	list-style: none;
-	padding: 0;
-}
-
-.ftl-table--title,
-.ftl-table--price {
-	width: 60%;
-}
-
-.ftl-table--time,
-.ftl-table--button {
-	width: 39%;
-}
-
-.ftl-table li {
-	margin-bottom: 50px;
-}
-
-.ftl-table--title {
-	display: inline-block;
-	line-height: 2.8em;
-	padding: 0 10px;
-	background-color: #fff;
-}
-
-.ftl-table--time {
-	display: inline-block;
-	line-height: 2.8em;
-	padding: 0 10px;
-	background-color: #fff;
-}
-
-.ftl-table--price {
-	line-height: 2.8em;
-	display: block;
-	width: 100%;
-	line-height: 1.5em;
-	padding: 20px;
-}
-
-.ftl-table--button {
-	background-color: $button-color;
-	color: #fff;
-	text-align: center;
-	display: block;
-	width: 100%;
-	line-height: 1.5em;
-	padding: 20px;
-}
-
-@media (min-width: 853px) {
-	.ftl-table--title,
-				  .ftl-table--price {
-		width: 80%;
-	}
-
-	.ftl-table--time,
-				  .ftl-table--button {
-		width: 19%;
-	}
-}
-
-@media (min-width: 480px) {
-	.ftl-table--time:before {
-		content: 'time: ';
-	}
-}
-
-@media (min-width: 380px) {
-	.ftl-table--button {
-		display: inline-block;
-		line-height: 2.8em;
-		padding: 0;
-	}
-
-	.ftl-table--price {
-		display: inline-block;
-		padding: 0 10px;
-	}
-
-	.ftl-table--title,
-				  .ftl-table--price {
-		width: 70%;
-	}
-
-	.ftl-table--time,
-				  .ftl-table--button {
-		width: 29%;
-	}
-}
-
-
-/**
-	* SECTION: Product blocks
-	*/
-.ftl-product {
-	vertical-align: top;
-}
-
-.ftl-actions {
-	margin: 30px auto;
-}
-
-.ftl-product--header {
-	display: block;
-	width: 100%;
-	text-align: center;
-	font-weight: 400;
-	font-size: 1.5em;
-	padding: 2px;
-}
-
-.ftl-product--body {
-	padding: 0 20px;
-}
-
-.ftl-product--body.ftl-product--body__summary {
-	padding: 0;
-	font-size: 1em;
-}
-
-@media (min-width: 767px) {
-	.ftl-product {
-		max-width: 380px;
-	}
-
-	.ftl-product--body.ftl-product--body__summary {
-		font-size: 1.2em;
-		height: 200px;
-	}
-}
-
-@media (min-width: 810px) {
-	.ftl-product--body.ftl-product--body__summary {
-		height: 160px;
-	}
-}
-
-.ftl-product--price {
-	margin: 10px;
-	position: absolute;
-	bottom: 0;
-	left: 1em;
-}
-
-
-/*
-	* SECTION: Misc
-	*/
-.ftl-dog-walking {
-	max-width: 600px;
-}
-
-#policies {
-	padding: 5%;
-}
