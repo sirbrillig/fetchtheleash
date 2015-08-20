@@ -20,28 +20,22 @@ $link-color: #DCCCC0;
 	* SECTION: General overrides
 	*/
 .site-title, .site-description {
-	margin-left: 110px;
-	@media (min-width: 400px) {
-		margin-left: 200px;
-	}
-	@media (min-width: 650px) {
+	margin-left: 100px;
+	@media (min-width: 767px) {
 		margin-left: 300px;
 	}
 }
 
 .site-title {
 	font-size: 1.4em;
-	@media (min-width: 650px) {
-		font-size: 2em;
-	}
-	@media (min-width: 650px) {
+	@media (min-width: 767px) {
 		font-size: 50px;
 	}
 }
 
 .site-description {
-	font-size: 1em;
-	@media (min-width: 650px) {
+	font-size: 0.9em;
+	@media (min-width: 767px) {
 		font-size: 30px;
 	}
 }
@@ -95,10 +89,6 @@ footer.entry-meta {
 	min-height: 50px;
 	background-size: contain;
 	margin: 0 auto 10px;
-	@media (min-width: 400px) {
-		height: inherit;
-		min-height: 120px;
-	}
 	@media (min-width: 767px) {
 		min-height: 190px;
 	}
@@ -278,10 +268,8 @@ img.ftl-hero__image {
 		padding: 0 10px;
 		margin: 10px 0;
 		vertical-align: top;
-		@media (min-width: 700px) {
-			width: 30%;
-		}
 		@media (min-width: 767px) {
+			width: 30%;
 			max-width: 380px;
 		}
 }
