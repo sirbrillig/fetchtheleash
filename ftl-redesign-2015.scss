@@ -156,11 +156,15 @@ a.ftl-button {
 	-moz-border-radius: 10;
 	border-radius: 10px;
 	color: #ffffff;
-	font-size: 1.2em;
+	font-size: 1em;
 	padding: 10px 20px;
 	text-decoration: none;
 	text-align: center;
 	display: block;
+
+	@media (min-width: 767px) {
+		font-size: 1.2em;
+	}
 }
 
 .ftl-button--call-to-action {
@@ -254,10 +258,12 @@ img.ftl-hero__image {
 
 .ftl-training-list__item {
 		display: inline-block;
-		width: 30%;
 		padding: 0 10px;
 		margin: 10px 0;
 		vertical-align: top;
+		@media (min-width: 700px) {
+			width: 30%;
+		}
 		@media (min-width: 767px) {
 			max-width: 380px;
 		}
@@ -287,8 +293,10 @@ a.ftl-button--training-list {
 .ftl-training-list__item__body {
 	padding: 0;
 	font-size: 1em;
-	@media (min-width: 767px) {
+	@media (min-width: 880px) {
 		font-size: 1.2em;
+	}
+	@media (min-width: 767px) {
 		height: 200px;
 		overflow: hidden;
 	}
