@@ -20,15 +20,30 @@ $link-color: #DCCCC0;
 	* SECTION: General overrides
 	*/
 .site-title, .site-description {
-	margin-left: 300px;
+	margin-left: 110px;
+	@media (min-width: 400px) {
+		margin-left: 200px;
+	}
+	@media (min-width: 650px) {
+		margin-left: 300px;
+	}
 }
 
 .site-title {
-	font-size: 50px;
+	font-size: 1.4em;
+	@media (min-width: 650px) {
+		font-size: 2em;
+	}
+	@media (min-width: 650px) {
+		font-size: 50px;
+	}
 }
 
 .site-description {
-	font-size: 30px;
+	font-size: 1em;
+	@media (min-width: 650px) {
+		font-size: 30px;
+	}
 }
 
 .site-main {
@@ -67,15 +82,26 @@ footer.entry-meta {
 .site .site-header {
 	background-image: url(http://local.wordpress.dev/wp-content/uploads/2015/08/sniffing.png);
 	background-repeat: repeat;
-	background-size: cover;
+	background-size: 768px auto;
+	@media (min-width: 359px) {
+		background-size: cover;
+	}
 }
 
 .site-header .home-link {
 	background: url(http://local.wordpress.dev/wp-content/uploads/2015/08/Fetch-the-Leash-dog-white.png) no-repeat scroll top;
 	background-position: 40px;
-	min-height: 120px;
+	height: 50px;
+	min-height: 50px;
 	background-size: contain;
 	margin: 0 auto 10px;
+	@media (min-width: 400px) {
+		height: inherit;
+		min-height: 120px;
+	}
+	@media (min-width: 767px) {
+		min-height: 190px;
+	}
 }
 
 @media (max-width: 643px) {
@@ -84,18 +110,7 @@ footer.entry-meta {
 	}
 }
 
-@media (max-width: 359px) {
-	.site .site-header {
-		background-size: 768px auto;
-	}
-}
-
-@media (min-width: 767px) {
-	.site-header .home-link {
-		min-height: 190px;
-	}
-}
-
+// Hide page titles
 .page .entry-header {
 	display: none;
 }
@@ -247,9 +262,11 @@ img.ftl-hero__image {
 .ftl-training-list {
 		position: relative;
 		margin: 0 auto;
-		padding: 0 80px;
 		vertical-align: top;
 		text-align: center;
+		@media (min-width: 500px) {
+			padding: 0 80px;
+		}
 }
 
 .ftl-training-list--walks {
