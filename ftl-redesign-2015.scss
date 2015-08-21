@@ -19,24 +19,24 @@ $link-color: #DCCCC0;
 /**
 	* SECTION: General overrides
 	*/
-.site-title, .site-description {
+
+.throwaway { display: none; } // apparently css plugin ignores the first rule
+
+.site-title {
 	margin-left: 100px;
+	font-size: 1.4em;
 	@media (min-width: 767px) {
+		font-size: 50px;
 		margin-left: 300px;
 	}
 }
 
-.site-title {
-	font-size: 1.4em;
-	@media (min-width: 767px) {
-		font-size: 50px;
-	}
-}
-
 .site-description {
+	margin-left: 100px;
 	font-size: 0.9em;
 	@media (min-width: 767px) {
 		font-size: 30px;
+		margin-left: 300px;
 	}
 }
 
