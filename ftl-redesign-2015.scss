@@ -399,10 +399,13 @@ a.ftl-button--back-to-top {
 	* SECTION: About
 	*/
 img.ftl-about__image {
+	width: 100%;
 	max-width: 300px;
-	float: left;
 	margin: 0 20px;
 	box-sizing: border-box;
+	@media (min-width: 767px) {
+		float: left;
+	}
 }
 
 .ftl-about {
