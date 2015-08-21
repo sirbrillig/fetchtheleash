@@ -425,3 +425,12 @@ img.ftl-about__image {
 	}
 }
 
+/**
+ * SECTION: Contact
+ */
+.ftl-contact {
+	padding: 0 10px;
+	@media (min-width: 450px) {
+		padding: 0 80px;
+	}
+}
