@@ -23,6 +23,7 @@ $link-color: #DCCCC0;
 .throwaway { display: none; } // apparently css plugin ignores the first rule
 
 .site-title {
+  color: #fff;
 	margin-left: 100px;
 	font-size: 1.4em;
 	@media (min-width: 767px) {
@@ -32,6 +33,7 @@ $link-color: #DCCCC0;
 }
 
 .site-description {
+  color: #fff;
 	margin-left: 100px;
 	font-size: 0.9em;
 	@media (min-width: 767px) {
@@ -74,7 +76,7 @@ footer.entry-meta {
 }
 
 .site .site-header {
-	background-image: url(http://local.wordpress.dev/wp-content/uploads/2015/08/sniffing.png);
+	background-image: url(https://ftlredesign.files.wordpress.com/2015/08/sniffing.png);
 	background-repeat: repeat;
 	background-size: 768px auto;
 	@media (min-width: 359px) {
@@ -83,7 +85,7 @@ footer.entry-meta {
 }
 
 .site-header .home-link {
-	background: url(http://local.wordpress.dev/wp-content/uploads/2015/08/Fetch-the-Leash-dog-white.png) no-repeat scroll top;
+	background: url(https://ftlredesign.files.wordpress.com/2015/08/fetch-the-leash-dog-white.png) no-repeat scroll top;
 	background-position: 40px;
 	height: 50px;
 	min-height: 50px;
