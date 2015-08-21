@@ -256,7 +256,9 @@ img.ftl-hero__image {
 }
 
 .ftl-training-list--walks {
+	@media (min-width: 500px) {
 		padding: 0 50px;
+	}
 }
 
 .ftl-training-list__item {
