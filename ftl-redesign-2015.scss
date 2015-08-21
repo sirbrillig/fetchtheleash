@@ -133,15 +133,11 @@ footer.entry-meta {
 }
 
 .entry-content img {
-	max-width: 50%;
 	display: block;
 	margin: 0 auto;
 	padding: 6px;
 	border: 1px solid #ddd;
-}
-
-@media (min-width: 767px) {
-	.entry-content img {
+	@media (min-width: 767px) {
 		max-width: 100%;
 		display: inline-block;
 	}
@@ -326,6 +322,9 @@ a.ftl-button--training-list {
 .ftl-policies {
 	padding: 30px;
 }
+	position: absolute;
+	right: 0;
+	top: 0;
 
 .ftl-policies__header {
 	font-size: 1.5em;
@@ -336,12 +335,15 @@ a.ftl-button--training-list {
 	* SECTION: Training detail
 	*/
 .ftl-training-detail {
-	height: 550px;
-	padding: 20px 0px 0px 50px;
+	padding: 20px;
 	background-color: $contrast-color;
 	font-size: 1.2em;
 	color: #fff;
 	position: relative;
+	@media (min-width: 767px) {
+		padding: 20px 0px 20px 50px;
+		height: 550px;
+	}
 }
 
 .ftl-training-detail__description {
@@ -358,21 +360,38 @@ a.ftl-button--training-list {
 }
 
 .ftl-training-detail__image {
-	position: absolute;
-	right: 0;
-	top: 0;
+	@media (min-width: 767px) {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
 
 	img { // Should be an image of approx 460 x 550
 		border: none;
 		padding: 0;
+		@media (min-width: 767px) {
+			width: 260px;
+			height: 550px;
+			object-fit: cover;
+		}
+		@media (min-width: 970px) {
+			width: 460px;
+		}
 	}
 }
 
+a.ftl-button--schedule {
+	max-width: 350px;
+}
+
 a.ftl-button--back-to-top {
-	font-size: 1rem;
-	width: 150px;
+	max-width: 350px;
 	margin: 10px 0;
-	padding: 8px 12px;
+	@media (min-width: 767px) {
+		font-size: 1rem;
+		width: 150px;
+		padding: 8px 12px;
+	}
 }
 
 
