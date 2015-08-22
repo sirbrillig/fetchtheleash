@@ -228,12 +228,14 @@ a.ftl-button {
 }
 
 img.ftl-hero__image {
-	max-width: 29%;
-	max-height: 40vh;
 	display: inline;
 	padding: 6px;
 	margin: 10px 0;
 	vertical-align: top;
+	@media (min-width: 767px) {
+		max-width: 29%;
+		max-height: 40vh;
+	}
 }
 
 .ftl-hero__buttons {
