@@ -69,10 +69,20 @@ footer.entry-meta {
 .entry-content blockquote {
 	margin: 0;
 	text-align: center;
-	padding: 10% 5%;
+	padding: 10px 20px;
 	background-color: $lighter-color;
 	color: #fff;
 	font-size: 1.2em;
+
+	p {
+		max-width: 1040px;
+		padding: 0;
+		margin: 0 auto 16px;
+	}
+
+	@media (min-width: 643px) {
+		padding: 60px 0;
+	}
 }
 
 .site .site-header {
@@ -171,29 +181,17 @@ a.ftl-button {
 
 	@media (min-width: 767px) {
 		font-size: 1.2em;
+		display: inline-block;
 	}
 }
 
 .ftl-button--call-to-action {
 	min-width: 97%;
-	margin: 5px;
 	white-space: nowrap;
-}
 
-.ftl-product .ftl-button {
-	max-width: 350px;
-	width: 100%;
-}
-
-@media (min-width: 359px) {
-	a.ftl-button--call-to-action {
+	@media (min-width: 359px) {
+		margin-right: 20px;
 		min-width: 30%;
-	}
-}
-
-@media (min-width: 767px) {
-	a.ftl-button {
-		display: inline-block;
 	}
 }
 
@@ -209,7 +207,8 @@ a.ftl-button {
 	text-align: center;
 
 	@media (min-width: 450px) {
-		padding: 0 80px;
+		padding: 0 0 40px;
+		max-width: 1040px;
 	}
 }
 
@@ -217,10 +216,7 @@ a.ftl-button {
 	display: inline-block;
 	padding-right: 10px;
 	text-align: left;
-
-	@media (min-width: 767px) {
-		width: 70%;
-	}
+	font-size: 1.1em;
 }
 
 .ftl-hero > p {
@@ -230,11 +226,13 @@ a.ftl-button {
 img.ftl-hero__image {
 	display: inline;
 	padding: 6px;
-	margin: 10px 0;
+	margin: 0;
 	vertical-align: top;
 	@media (min-width: 767px) {
+		float: right;
 		max-width: 29%;
-		max-height: 40vh;
+		max-height: 280px;
+		margin: 20px 0 0 20px;
 	}
 }
 
@@ -242,11 +240,7 @@ img.ftl-hero__image {
 	position: relative;
 	margin: 0 auto;
 	vertical-align: top;
-	text-align: center;
-
-	@media (min-width: 600px) {
-		padding: 0 80px;
-	}
+	text-align: left;
 }
 
 
