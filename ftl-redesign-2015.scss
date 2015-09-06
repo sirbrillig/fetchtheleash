@@ -80,7 +80,7 @@ footer.entry-meta {
 		margin: 0 auto 16px;
 	}
 
-	@media (min-width: 643px) {
+	@media (min-width: 1050px) {
 		padding: 60px 0;
 	}
 }
@@ -268,14 +268,10 @@ img.ftl-hero__image {
 	padding: 0 10px;
 	margin: 10px 0;
 	vertical-align: top;
-	@media (min-width: 767px) {
+	@media (min-width: 880px) {
 		width: 30%;
 		max-width: 380px;
 	}
-}
-
-.ftl-training-list__item--walks {
-	padding: 0 20px;
 }
 
 .ftl-training-list__item__buttons {
@@ -300,23 +296,29 @@ a.ftl-button--training-list {
 	font-size: 1em;
 	@media (min-width: 880px) {
 		font-size: 1.2em;
-	}
-	@media (min-width: 767px) {
-		height: 200px;
+		height: 250px;
 		overflow: hidden;
+	}
+	@media (min-width: 1050px) {
+		height: 200px;
+	}
+	@media (min-width: 1200px) {
+		height: 170px;
 	}
 }
 
 .ftl-training-list__item__body--long {
-	@media (min-width: 767px) {
+	@media (min-width: 880px) {
 		font-size: 1em;
-		height: 260px;
 		text-align: justify;
+		max-width: 24vw;
 	}
 }
 
 .ftl-training-list__notice {
-	padding: 30px;
+	padding: 30px 0;
+	max-width: 1040px;
+	margin: 0 auto;
 }
 
 .ftl-training-list__notice__header {
@@ -325,10 +327,13 @@ a.ftl-button--training-list {
 
 .ftl-policies {
 	padding: 30px;
+	max-width: 1040px;
+	margin: 0 auto;
+
+	@media (min-width: 1050px) {
+		padding: 30px 0;
+	}
 }
-position: absolute;
-right: 0;
-top: 0;
 
 .ftl-policies__header {
 	font-size: 1.5em;
