@@ -446,8 +446,18 @@ img.ftl-about__image {
  * SECTION: Contact
  */
 .ftl-contact {
+	margin: 10px auto;
+	max-width: 1040px;
 	padding: 0 10px;
 	@media (min-width: 450px) {
 		padding: 0 80px;
 	}
+}
+
+.ftl-contact__body {
+	font-size: 1.5em;
+}
+
+.ftl-button--contact {
+	margin-right: 20px;
 }
