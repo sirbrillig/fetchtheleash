@@ -1,12 +1,12 @@
 /**
-	* Custom CSS for fetchtheleash.biz
-	* Overrides base WordPress theme: Twentythirteen
-	*/
+ * Custom CSS for fetchtheleash.biz
+ * Overrides base WordPress theme: Twentythirteen
+ */
 
 /**
-	* SECTION: Colors
-	* Based on: http://paletton.com/#uid=23g0u0khYkA44rEaTnNqQh5F8fv
-*/
+ * SECTION: Colors
+ * Based on: http://paletton.com/#uid=23g0u0khYkA44rEaTnNqQh5F8fv
+ */
 $base-color: #2C6561;
 $button-color: #2C6561;
 $lighter-color: #4D7572;
@@ -17,12 +17,13 @@ $link-color: #DCCCC0;
 
 
 /**
-	* SECTION: General overrides
-	*/
+ * SECTION: General overrides
+ */
 
 .throwaway { display: none; } // apparently css plugin ignores the first rule
 
 .site-title {
+	color: #fff;
 	margin-left: 100px;
 	font-size: 1.4em;
 	@media (min-width: 767px) {
@@ -32,6 +33,7 @@ $link-color: #DCCCC0;
 }
 
 .site-description {
+	color: #fff;
 	margin-left: 100px;
 	font-size: 0.9em;
 	@media (min-width: 767px) {
@@ -67,14 +69,24 @@ footer.entry-meta {
 .entry-content blockquote {
 	margin: 0;
 	text-align: center;
-	padding: 10% 5%;
+	padding: 10px 20px;
 	background-color: $lighter-color;
 	color: #fff;
 	font-size: 1.2em;
+
+	p {
+		max-width: 1040px;
+		padding: 0;
+		margin: 0 auto 16px;
+	}
+
+	@media (min-width: 1069px) {
+		padding: 60px 0;
+	}
 }
 
 .site .site-header {
-	background-image: url(http://local.wordpress.dev/wp-content/uploads/2015/08/sniffing.png);
+	background-image: url(https://ftlredesign.files.wordpress.com/2015/08/sniffing.png);
 	background-repeat: repeat;
 	background-size: 768px auto;
 	@media (min-width: 359px) {
@@ -83,7 +95,7 @@ footer.entry-meta {
 }
 
 .site-header .home-link {
-	background: url(http://local.wordpress.dev/wp-content/uploads/2015/08/Fetch-the-Leash-dog-white.png) no-repeat scroll top;
+	background: url(https://ftlredesign.files.wordpress.com/2015/08/fetch-the-leash-dog-white.png) no-repeat scroll top;
 	background-position: 40px;
 	height: 50px;
 	min-height: 50px;
@@ -147,10 +159,14 @@ p {
 	margin: 0 0 16px;
 }
 
+.ftl-contact .contact-form textarea {
+	height: 100px;
+}
+
 
 /**
-	* SECTION: Buttons
-	*/
+ * SECTION: Buttons
+ */
 a.ftl-button {
 	background: $button-color;
 	-webkit-border-radius: 10;
@@ -159,51 +175,44 @@ a.ftl-button {
 	color: #ffffff;
 	font-size: 1em;
 	padding: 10px 20px;
+	margin-bottom: 10px;
 	text-decoration: none;
 	text-align: center;
 	display: block;
 
 	@media (min-width: 767px) {
 		font-size: 1.2em;
+		display: inline-block;
 	}
 }
 
 .ftl-button--call-to-action {
 	min-width: 97%;
-	margin: 5px;
 	white-space: nowrap;
-}
 
-.ftl-product .ftl-button {
-	max-width: 350px;
-	width: 100%;
-}
-
-@media (min-width: 359px) {
-	a.ftl-button--call-to-action {
+	@media (min-width: 359px) {
+		margin-right: 20px;
 		min-width: 30%;
-	}
-}
-
-@media (min-width: 767px) {
-	a.ftl-button {
-		display: inline-block;
 	}
 }
 
 
 /**
-	* SECTION: Hero block
-	*/
+ * SECTION: Hero block
+ */
 .ftl-hero {
 	position: relative;
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 0 20px 40px 20px;
 	vertical-align: top;
 	text-align: center;
 
 	@media (min-width: 450px) {
-		padding: 0 80px;
+		padding: 0 20px 0 20px;
+		max-width: 1040px;
+	}
+	@media (min-width: 1069px) {
+		padding: 0 0 40px 0;
 	}
 }
 
@@ -211,10 +220,7 @@ a.ftl-button {
 	display: inline-block;
 	padding-right: 10px;
 	text-align: left;
-
-	@media (min-width: 767px) {
-		width: 70%;
-	}
+	font-size: 1.1em;
 }
 
 .ftl-hero > p {
@@ -222,58 +228,59 @@ a.ftl-button {
 }
 
 img.ftl-hero__image {
-	max-width: 29%;
-	max-height: 40vh;
 	display: inline;
 	padding: 6px;
-	margin: 10px 0;
+	margin: 0;
 	vertical-align: top;
+	@media (min-width: 767px) {
+		float: right;
+		max-width: 29%;
+		max-height: 280px;
+		margin: 20px 0 0 20px;
+	}
 }
 
 .ftl-hero__buttons {
 	position: relative;
 	margin: 0 auto;
 	vertical-align: top;
-	text-align: center;
-
-	@media (min-width: 600px) {
-		padding: 0 80px;
-	}
+	text-align: left;
 }
 
 
 /**
-	* SECTION: Training list
-	*/
+ * SECTION: Training list
+ */
 .ftl-training-list {
-		position: relative;
-		margin: 0 auto;
-		vertical-align: top;
-		text-align: center;
-		@media (min-width: 500px) {
-			padding: 0 80px;
-		}
-}
-
-.ftl-training-list--walks {
+	position: relative;
+	margin: 0 auto;
+	vertical-align: top;
+	text-align: center;
 	@media (min-width: 500px) {
-		padding: 0 50px;
+		max-width: 1040px;
+		margin: 0 auto;
 	}
 }
 
-.ftl-training-list__item {
-		display: inline-block;
-		padding: 0 10px;
-		margin: 10px 0;
-		vertical-align: top;
-		@media (min-width: 767px) {
-			width: 30%;
-			max-width: 380px;
-		}
+.ftl-training-list--walks {
 }
 
-.ftl-training-list__item--walks {
-		padding: 0 20px;
+.ftl-training-list__item {
+	display: inline-block;
+	padding: 0 20px;
+	margin: 10px 0;
+	vertical-align: top;
+	@media (min-width: 880px) {
+		width: 33%;
+		max-width: 380px;
+	}
+	@media (min-width: 1069px) {
+		padding: 0;
+	}
+
+	&:nth-of-type(2n) {
+		padding: 0 25px;
+	}
 }
 
 .ftl-training-list__item__buttons {
@@ -281,7 +288,8 @@ img.ftl-hero__image {
 }
 
 a.ftl-button--training-list {
-	padding: 10px 22px;
+	width: 100%;
+	padding: 10px 30px;
 }
 
 .ftl-training-list__item__header {
@@ -298,23 +306,28 @@ a.ftl-button--training-list {
 	font-size: 1em;
 	@media (min-width: 880px) {
 		font-size: 1.2em;
-	}
-	@media (min-width: 767px) {
-		height: 200px;
+		height: 250px;
 		overflow: hidden;
+	}
+	@media (min-width: 1050px) {
+		height: 200px;
+	}
+	@media (min-width: 1200px) {
+		height: 170px;
 	}
 }
 
 .ftl-training-list__item__body--long {
-	@media (min-width: 767px) {
+	@media (min-width: 880px) {
 		font-size: 1em;
-		height: 260px;
 		text-align: justify;
 	}
 }
 
 .ftl-training-list__notice {
-	padding: 30px;
+	padding: 30px 0;
+	max-width: 1040px;
+	margin: 0 auto;
 }
 
 .ftl-training-list__notice__header {
@@ -323,10 +336,13 @@ a.ftl-button--training-list {
 
 .ftl-policies {
 	padding: 30px;
+	max-width: 1040px;
+	margin: 0 auto;
+
+	@media (min-width: 1050px) {
+		padding: 30px 0;
+	}
 }
-	position: absolute;
-	right: 0;
-	top: 0;
 
 .ftl-policies__header {
 	font-size: 1.5em;
@@ -334,18 +350,22 @@ a.ftl-button--training-list {
 
 
 /**
-	* SECTION: Training detail
-	*/
+ * SECTION: Training detail
+ */
 .ftl-training-detail {
 	padding: 20px;
 	background-color: $contrast-color;
-	font-size: 1.2em;
+	font-size: 1em;
 	color: #fff;
 	position: relative;
 	@media (min-width: 767px) {
-		padding: 20px 0px 20px 50px;
 		height: 550px;
 	}
+}
+
+.ftl-training-detail__body {
+	margin: 0 auto 42px auto;
+	max-width: 1040px;
 }
 
 .ftl-training-detail__description {
@@ -356,9 +376,18 @@ a.ftl-button--training-list {
 	font-size: 2.5em;
 }
 
+.ftl-training-detail__buttons {
+	@media (min-width: 767px) {
+		position: absolute;
+		bottom: 30px;
+	}
+}
+
 .ftl-training-detail__price {
 	font-size: .9em;
-	margin: 15px 0;
+	margin: 50px 0;
+	max-width: 440px;
+	line-height: 1.7em;
 }
 
 .ftl-training-detail__image {
@@ -376,7 +405,7 @@ a.ftl-button--training-list {
 			height: 550px;
 			object-fit: cover;
 		}
-		@media (min-width: 970px) {
+		@media (min-width: 1069px) {
 			width: 460px;
 		}
 	}
@@ -384,41 +413,43 @@ a.ftl-button--training-list {
 
 a.ftl-button--schedule {
 	max-width: 350px;
+	@media (min-width: 767px) {
+		margin-right: 10px;
+	}
 }
 
 a.ftl-button--back-to-top {
+	background-color: #D4D8D7;
+	color: #555;
 	max-width: 350px;
-	margin: 10px 0;
-	@media (min-width: 767px) {
-		font-size: 1rem;
-		width: 150px;
-		padding: 8px 12px;
-	}
 }
 
 
 /**
-	* SECTION: About
-	*/
+ * SECTION: About
+ */
 img.ftl-about__image {
 	width: 100%;
 	max-width: 300px;
 	margin: 0 20px;
 	box-sizing: border-box;
 	@media (min-width: 767px) {
-		float: left;
+		float: right;
 	}
 }
 
 .ftl-about {
 	position: relative;
 	margin: 0 auto;
-	padding: 0 10px;
 	vertical-align: top;
 	font-size: 1.1em;
 	display: block;
 	text-align: left;
-	max-width: 80%;
+	max-width: 1040px;
+	padding: 0 20px;
+	@media (min-width: 1069px) {
+		padding: 0;
+	}
 
 	p {
 		text-align: left;
@@ -429,8 +460,18 @@ img.ftl-about__image {
  * SECTION: Contact
  */
 .ftl-contact {
-	padding: 0 10px;
-	@media (min-width: 450px) {
-		padding: 0 80px;
+	margin: 10px auto;
+	max-width: 1040px;
+	padding: 0 20px;
+	@media (min-width: 1069px) {
+		padding: 0;
 	}
+}
+
+.ftl-contact__body {
+	font-size: 1.5em;
+}
+
+.ftl-button--contact {
+	margin-right: 20px;
 }
