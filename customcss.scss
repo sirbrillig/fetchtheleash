@@ -47,12 +47,12 @@ $link-color: #DCCCC0;
 }
 
 article.page {
-	padding: 15px 0 0;
+	padding: 0;
 }
 
 div.entry-content {
 	max-width: 100%;
-	margin-top: 10px;
+  margin: 0;
 }
 
 footer.entry-meta {
@@ -161,6 +161,10 @@ p {
 
 .ftl-contact .contact-form textarea {
 	height: 100px;
+}
+
+.ftl-page {
+  padding-top: 15px;
 }
 
 
