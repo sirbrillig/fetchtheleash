@@ -190,13 +190,16 @@ a.ftl-button {
 	}
 }
 
-.ftl-button--call-to-action {
+.ftl-button--hero {
 	min-width: 97%;
-	white-space: nowrap;
+	max-width: 200px;
 
 	@media (min-width: 359px) {
 		margin-right: 20px;
 		min-width: 30%;
+	}
+	@media (min-width: 880px) {
+		max-width: inherit;
 	}
 }
 
@@ -205,50 +208,63 @@ a.ftl-button {
  * SECTION: Hero block
  */
 .ftl-hero {
-	position: relative;
 	margin: 0 auto;
-	padding: 0 20px 40px 20px;
-	vertical-align: top;
-	text-align: center;
-
-	@media (min-width: 450px) {
-		padding: 0 20px 0 20px;
-		max-width: 1040px;
+	max-width: 1040px;
+	padding: 15px 20px;
+	@media (min-width: 767px) {
+		height: 450px;
 	}
 	@media (min-width: 1069px) {
-		padding: 0 0 40px 0;
+		padding: 25px 0;
 	}
 }
 
 .ftl-hero__text {
+	padding: 15px 0;
+	max-width: 400px;
 	display: inline-block;
-	padding-right: 10px;
 	text-align: left;
 	font-size: 1.1em;
+	@media (min-width: 880px) {
+		max-width: 600px;
+	}
 }
 
 .ftl-hero > p {
 	display: inline; // not sure if needed but WP seems to add a p around the img
 }
 
-img.ftl-hero__image {
-	display: inline;
-	padding: 6px;
-	margin: 0;
-	vertical-align: top;
+.ftl-hero__image {
 	@media (min-width: 767px) {
-		float: right;
-		max-width: 29%;
-		max-height: 280px;
-		margin: 20px 0 0 20px;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	img { // Should be an image of approx 460 x 450
+		border: none;
+		padding: 0;
+		@media (min-width: 767px) {
+			width: 260px;
+			height: 450px;
+			object-fit: cover;
+		}
+		@media (min-width: 1069px) {
+			width: 460px;
+		}
 	}
 }
 
 .ftl-hero__buttons {
 	position: relative;
-	margin: 0 auto;
+	margin: 0;
 	vertical-align: top;
 	text-align: left;
+	max-width: 450px;
+
+	@media (min-width: 880px) {
+		max-width: 600px;
+	}
 }
 
 
