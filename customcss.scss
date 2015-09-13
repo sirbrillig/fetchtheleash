@@ -295,11 +295,7 @@ a.ftl-button {
 		max-width: 380px;
 	}
 	@media (min-width: 1069px) {
-		padding: 0;
-	}
-
-	&:nth-of-type(2n) {
-		padding: 0 25px;
+		padding: 0 10px;
 	}
 }
 
