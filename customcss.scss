@@ -17,6 +17,56 @@ $link-color: #DCCCC0;
 
 
 /**
+ * SECTION: Mixins
+ */
+@mixin ftl-image-block($height: 550px) {
+	padding: 20px;
+	background-color: $contrast-color;
+	font-size: 1em;
+	color: #fff;
+	position: relative;
+	@media (min-width: 767px) {
+		height: $height;
+	}
+}
+
+@mixin ftl-image-block__header() {
+	font-size: 2.5em;
+}
+
+@mixin ftl-image-block__body() {
+	margin: 0 auto 42px auto;
+	max-width: 1040px;
+}
+
+@mixin ftl-image-block__text() {
+	max-width: 440px;
+}
+
+@mixin ftl-image-block__image($height: 550px, $position: 50%) {
+	@media (min-width: 767px) {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	img { // Should be an image of approx 460 x $height
+		border: none;
+		padding: 0;
+		@media (min-width: 767px) {
+			width: 260px;
+			height: $height;
+			object-fit: cover;
+			object-position: $position;
+		}
+		@media (min-width: 1069px) {
+			width: 460px;
+		}
+	}
+}
+
+
+/**
  * SECTION: General overrides
  */
 
@@ -348,49 +398,23 @@ a.ftl-button--training-list {
 }
 
 .ftl-training-list__notice {
-	padding: 20px;
-	background-color: $contrast-color;
-	font-size: 1em;
-	color: #fff;
-	position: relative;
-	@media (min-width: 767px) {
-		height: 350px;
-	}
+	@include ftl-image-block(350px);
 }
 
 .ftl-training-list__notice__header {
-	font-size: 2.5em;
+	@include ftl-image-block__header();
 }
 
 .ftl-training-list__notice__body {
-	margin: 0 auto 42px auto;
-	max-width: 1040px;
+	@include ftl-image-block__body();
 }
 
 .ftl-training-list__notice__details {
-	max-width: 440px;
+	@include ftl-image-block__text();
 }
 
 .ftl-training-list__notice__image {
-	@media (min-width: 767px) {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-
-	img { // Should be an image of approx 460 x 350
-		border: none;
-		padding: 0;
-		@media (min-width: 767px) {
-			width: 260px;
-			height: 350px;
-			object-fit: cover;
-			object-position: 15% 0%;
-		}
-		@media (min-width: 1069px) {
-			width: 460px;
-		}
-	}
+	@include ftl-image-block__image(350px, 15% 0%);
 }
 
 .ftl-policies {
@@ -412,27 +436,19 @@ a.ftl-button--training-list {
  * SECTION: Training detail
  */
 .ftl-training-detail {
-	padding: 20px;
-	background-color: $contrast-color;
-	font-size: 1em;
-	color: #fff;
-	position: relative;
-	@media (min-width: 767px) {
-		height: 550px;
-	}
+	@include ftl-image-block;
 }
 
 .ftl-training-detail__body {
-	margin: 0 auto 42px auto;
-	max-width: 1040px;
+	@include ftl-image-block__body;
 }
 
 .ftl-training-detail__description {
-	max-width: 440px;
+	@include ftl-image-block__text;
 }
 
 .ftl-training-detail__header {
-	font-size: 2.5em;
+	@include ftl-image-block__header;
 }
 
 .ftl-training-detail__buttons {
@@ -450,24 +466,7 @@ a.ftl-button--training-list {
 }
 
 .ftl-training-detail__image {
-	@media (min-width: 767px) {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-
-	img { // Should be an image of approx 460 x 550
-		border: none;
-		padding: 0;
-		@media (min-width: 767px) {
-			width: 260px;
-			height: 550px;
-			object-fit: cover;
-		}
-		@media (min-width: 1069px) {
-			width: 460px;
-		}
-	}
+	@include ftl-image-block__image;
 }
 
 a.ftl-button--schedule {
