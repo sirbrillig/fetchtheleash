@@ -398,7 +398,7 @@ a.ftl-button--training-list {
 }
 
 .ftl-training-list__notice {
-	@include ftl-image-block(350px);
+	@include ftl-image-block(425px);
 }
 
 .ftl-training-list__notice__header {
@@ -414,7 +414,7 @@ a.ftl-button--training-list {
 }
 
 .ftl-training-list__notice__image {
-	@include ftl-image-block__image(350px, 15% 0%);
+	@include ftl-image-block__image(425px, 50% 0%);
 }
 
 .ftl-policies {
