@@ -517,6 +517,33 @@ img.ftl-about__image {
 /**
  * SECTION: Contact
  */
+.ftl-contact-choice {
+	@media (min-width: 767px) {
+		padding: 0;
+	}
+}
+
+.ftl-contact-choice__box {
+	@include ftl-image-block(425px);
+}
+
+.ftl-contact-choice__box__header {
+	font-size: 1.8em;
+}
+
+.ftl-contact-choice__box__body {
+	@include ftl-image-block__body();
+	margin-top: 5em;
+}
+
+.ftl-contact-choice__box__details {
+	@include ftl-image-block__text();
+}
+
+.ftl-contact-choice__box__image {
+	@include ftl-image-block__image(425px, 50% 0%);
+}
+
 .ftl-contact {
 	margin: 10px auto;
 	max-width: 1040px;
@@ -524,10 +551,6 @@ img.ftl-about__image {
 	@media (min-width: 1069px) {
 		padding: 0;
 	}
-}
-
-.ftl-contact__body {
-	font-size: 1.5em;
 }
 
 .ftl-button--contact {
