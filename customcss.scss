@@ -517,10 +517,10 @@ a.ftl-button--back-to-top {
  */
 img.ftl-about__image {
 	width: 100%;
-	max-width: 300px;
-	margin: 0 20px;
 	box-sizing: border-box;
 	@media (min-width: 767px) {
+		max-width: 45%;
+		margin: 0 20px;
 		float: right;
 	}
 }
