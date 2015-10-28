@@ -344,12 +344,23 @@ a.ftl-button {
 	text-align: center;
 	@media (min-width: 500px) {
 		max-width: 1040px;
-		margin: 0 auto;
 	}
 }
 
 .ftl-training-list--walks {
 }
+
+.ftl-walks-info {
+	position: relative;
+	margin: 1em auto;
+	vertical-align: top;
+	text-align: center;
+	@media (min-width: 500px) {
+		max-width: 1040px;
+		font-size: 1.2em;
+	}
+}
+
 
 .ftl-training-list__item {
 	display: inline-block;
