@@ -19,6 +19,15 @@ $link-color: #DCCCC0;
 /**
  * SECTION: Mixins
  */
+@mixin ftl-bare-links() {
+	a {
+		text-decoration: underline;
+	}
+	a:hover {
+		color: $darker-color;
+	}
+}
+
 @mixin ftl-image-block($height: 550px) {
 	padding: 20px;
 	background-color: $contrast-color;
@@ -411,6 +420,7 @@ a.ftl-button--training-list {
 
 .ftl-training-list__notice__details {
 	@include ftl-image-block__text();
+	@include ftl-bare-links;
 }
 
 .ftl-training-list__notice__image {
@@ -460,9 +470,17 @@ a.ftl-button--training-list {
 
 .ftl-training-detail__price {
 	font-size: .9em;
-	margin: 50px 0;
+	margin: 30px 0;
 	max-width: 440px;
 	line-height: 1.7em;
+}
+
+.ftl-training-detail__links {
+	font-size: .9em;
+	margin: 25px 0;
+	max-width: 440px;
+	line-height: 1.7em;
+	@include ftl-bare-links;
 }
 
 .ftl-training-detail__image {
