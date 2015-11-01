@@ -149,10 +149,10 @@ footer.entry-meta {
 }
 
 .site .site-header {
-	background-image: url(https://ftlredesign.files.wordpress.com/2015/08/sniffing.png);
+	background-image: url(https://ftlredesign.files.wordpress.com/2015/11/sniffing-small.png);
 	background-repeat: repeat;
-	background-size: 768px auto;
-	@media (min-width: 359px) {
+	@media (min-width: 767px) {
+    background-image: url(https://ftlredesign.files.wordpress.com/2015/11/sniffing-large.png);
 		background-size: cover;
 	}
 }
