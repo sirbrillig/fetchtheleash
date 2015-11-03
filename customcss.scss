@@ -246,6 +246,8 @@ a.ftl-button {
 	text-decoration: none;
 	text-align: center;
 	display: block;
+	hyphens: none;
+	-webkit-hyphens: none;
 
 	@media (min-width: 767px) {
 		font-size: 1.2em;
