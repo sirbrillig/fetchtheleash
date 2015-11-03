@@ -17,6 +17,65 @@ $link-color: #DCCCC0;
 
 
 /**
+ * SECTION: Mixins
+ */
+@mixin ftl-bare-links() {
+	a {
+		text-decoration: underline;
+	}
+	a:hover {
+		color: $darker-color;
+	}
+}
+
+@mixin ftl-image-block($height: 550px) {
+	padding: 20px;
+	background-color: $contrast-color;
+	font-size: 1em;
+	color: #fff;
+	position: relative;
+	@media (min-width: 767px) {
+		height: $height;
+	}
+}
+
+@mixin ftl-image-block__header() {
+	font-size: 2.5em;
+}
+
+@mixin ftl-image-block__body() {
+	margin: 0 auto 42px auto;
+	max-width: 1040px;
+}
+
+@mixin ftl-image-block__text() {
+	max-width: 440px;
+}
+
+@mixin ftl-image-block__image($height: 550px, $position: 50%) {
+	@media (min-width: 767px) {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	img { // Should be an image of approx 460 x $height
+		border: none;
+		padding: 0;
+		@media (min-width: 767px) {
+			width: 260px;
+			height: $height;
+			object-fit: cover;
+			object-position: $position;
+		}
+		@media (min-width: 1069px) {
+			width: 460px;
+		}
+	}
+}
+
+
+/**
  * SECTION: General overrides
  */
 
@@ -36,9 +95,9 @@ $link-color: #DCCCC0;
 	color: #fff;
 	margin-left: 100px;
 	font-size: 0.9em;
-  display: none;
+	display: none;
 	@media (min-width: 480px) {
-    display: block;
+		display: block;
 	}
 	@media (min-width: 767px) {
 		font-size: 30px;
@@ -56,7 +115,7 @@ article.page {
 
 div.entry-content {
 	max-width: 100%;
-  margin: 0;
+	margin: 0;
 }
 
 footer.entry-meta {
@@ -90,10 +149,10 @@ footer.entry-meta {
 }
 
 .site .site-header {
-	background-image: url(https://ftlredesign.files.wordpress.com/2015/08/sniffing.png);
+	background-image: url(https://ftlredesign.files.wordpress.com/2015/11/sniffing-small.png);
 	background-repeat: repeat;
-	background-size: 768px auto;
-	@media (min-width: 359px) {
+	@media (min-width: 767px) {
+    background-image: url(https://ftlredesign.files.wordpress.com/2015/11/sniffing-large.png);
 		background-size: cover;
 	}
 }
@@ -168,7 +227,7 @@ p {
 }
 
 .ftl-page {
-  padding-top: 15px;
+	padding-top: 15px;
 }
 
 
@@ -187,6 +246,8 @@ a.ftl-button {
 	text-decoration: none;
 	text-align: center;
 	display: block;
+	hyphens: none;
+	-webkit-hyphens: none;
 
 	@media (min-width: 767px) {
 		font-size: 1.2em;
@@ -215,7 +276,7 @@ a.ftl-button {
 	margin: 0 auto;
 	max-width: 1040px;
 	padding: 15px 20px;
-	@media (min-width: 767px) {
+	@media (min-width: 880px) {
 		height: 450px;
 	}
 	@media (min-width: 1069px) {
@@ -252,8 +313,11 @@ a.ftl-button {
 		padding: 0;
 		@media (min-width: 767px) {
 			width: 260px;
-			height: 450px;
+			height: 494px;
 			object-fit: cover;
+		}
+		@media (min-width: 880px) {
+			height: 450px;
 		}
 		@media (min-width: 1069px) {
 			width: 460px;
@@ -285,12 +349,23 @@ a.ftl-button {
 	text-align: center;
 	@media (min-width: 500px) {
 		max-width: 1040px;
-		margin: 0 auto;
 	}
 }
 
 .ftl-training-list--walks {
 }
+
+.ftl-walks-info {
+	position: relative;
+	margin: 1em auto;
+	vertical-align: top;
+	text-align: center;
+	@media (min-width: 500px) {
+		max-width: 1040px;
+		font-size: 1.2em;
+	}
+}
+
 
 .ftl-training-list__item {
 	display: inline-block;
@@ -348,13 +423,24 @@ a.ftl-button--training-list {
 }
 
 .ftl-training-list__notice {
-	padding: 30px 0;
-	max-width: 1040px;
-	margin: 0 auto;
+	@include ftl-image-block(425px);
 }
 
 .ftl-training-list__notice__header {
-	font-size: 1.5em;
+	@include ftl-image-block__header();
+}
+
+.ftl-training-list__notice__body {
+	@include ftl-image-block__body();
+}
+
+.ftl-training-list__notice__details {
+	@include ftl-image-block__text();
+	@include ftl-bare-links;
+}
+
+.ftl-training-list__notice__image {
+	@include ftl-image-block__image(425px, 50% 0%);
 }
 
 .ftl-policies {
@@ -376,27 +462,19 @@ a.ftl-button--training-list {
  * SECTION: Training detail
  */
 .ftl-training-detail {
-	padding: 20px;
-	background-color: $contrast-color;
-	font-size: 1em;
-	color: #fff;
-	position: relative;
-	@media (min-width: 767px) {
-		height: 550px;
-	}
+	@include ftl-image-block;
 }
 
 .ftl-training-detail__body {
-	margin: 0 auto 42px auto;
-	max-width: 1040px;
+	@include ftl-image-block__body;
 }
 
 .ftl-training-detail__description {
-	max-width: 440px;
+	@include ftl-image-block__text;
 }
 
 .ftl-training-detail__header {
-	font-size: 2.5em;
+	@include ftl-image-block__header;
 }
 
 .ftl-training-detail__buttons {
@@ -408,30 +486,21 @@ a.ftl-button--training-list {
 
 .ftl-training-detail__price {
 	font-size: .9em;
-	margin: 50px 0;
+	margin: 30px 0;
 	max-width: 440px;
 	line-height: 1.7em;
 }
 
-.ftl-training-detail__image {
-	@media (min-width: 767px) {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
+.ftl-training-detail__links {
+	font-size: .9em;
+	margin: 25px 0;
+	max-width: 440px;
+	line-height: 1.7em;
+	@include ftl-bare-links;
+}
 
-	img { // Should be an image of approx 460 x 550
-		border: none;
-		padding: 0;
-		@media (min-width: 767px) {
-			width: 260px;
-			height: 550px;
-			object-fit: cover;
-		}
-		@media (min-width: 1069px) {
-			width: 460px;
-		}
-	}
+.ftl-training-detail__image {
+	@include ftl-image-block__image;
 }
 
 a.ftl-button--schedule {
@@ -453,10 +522,10 @@ a.ftl-button--back-to-top {
  */
 img.ftl-about__image {
 	width: 100%;
-	max-width: 300px;
-	margin: 0 20px;
 	box-sizing: border-box;
 	@media (min-width: 767px) {
+		max-width: 45%;
+		margin: 0 20px;
 		float: right;
 	}
 }
@@ -482,6 +551,37 @@ img.ftl-about__image {
 /**
  * SECTION: Contact
  */
+.ftl-contact-choice {
+	@media (min-width: 767px) {
+		padding: 0;
+	}
+}
+
+.ftl-contact-choice__box {
+	@include ftl-image-block(425px);
+}
+
+.ftl-contact-choice__box__header {
+	font-size: 1.8em;
+	width: 500px;
+	@media (min-width: 900px) {
+		width: auto;
+	}
+}
+
+.ftl-contact-choice__box__body {
+	@include ftl-image-block__body();
+	margin-top: 5em;
+}
+
+.ftl-contact-choice__box__details {
+	@include ftl-image-block__text();
+}
+
+.ftl-contact-choice__box__image {
+	@include ftl-image-block__image(425px, 50% 0%);
+}
+
 .ftl-contact {
 	margin: 10px auto;
 	max-width: 1040px;
@@ -489,10 +589,6 @@ img.ftl-about__image {
 	@media (min-width: 1069px) {
 		padding: 0;
 	}
-}
-
-.ftl-contact__body {
-	font-size: 1.5em;
 }
 
 .ftl-button--contact {
