@@ -276,7 +276,7 @@ a.ftl-button {
 	margin: 0 auto;
 	max-width: 1040px;
 	padding: 15px 20px;
-	@media (min-width: 767px) {
+	@media (min-width: 880px) {
 		height: 450px;
 	}
 	@media (min-width: 1069px) {
@@ -313,8 +313,11 @@ a.ftl-button {
 		padding: 0;
 		@media (min-width: 767px) {
 			width: 260px;
-			height: 450px;
+			height: 494px;
 			object-fit: cover;
+		}
+		@media (min-width: 880px) {
+			height: 450px;
 		}
 		@media (min-width: 1069px) {
 			width: 460px;
@@ -560,6 +563,10 @@ img.ftl-about__image {
 
 .ftl-contact-choice__box__header {
 	font-size: 1.8em;
+	width: 500px;
+	@media (min-width: 900px) {
+		width: auto;
+	}
 }
 
 .ftl-contact-choice__box__body {
