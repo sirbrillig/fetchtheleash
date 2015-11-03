@@ -563,9 +563,9 @@ img.ftl-about__image {
 
 .ftl-contact-choice__box__header {
 	font-size: 1.8em;
-	width: 500px;
+	max-width: 500px;
 	@media (min-width: 900px) {
-		width: auto;
+		max-width: none;
 	}
 }
 
